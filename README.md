@@ -5,5 +5,5 @@ Reciter is a tool for memorizing Quran by allowing the reader to recite without 
 ![Main view](./docs/main.png)
 
 ### Important note
-The tool is not revised yet, however the content was fetched directly from [www.quran.com](www.quran.com)
+The tool is not revised yet, however the content was fetched directly from [quran.com](https://quran.com)
 
