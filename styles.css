@@ -1,0 +1,190 @@
+
+#typed-output {
+    font-size: 20px;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    color: #333;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 20px;
+    min-height: 50px;
+    max-height: 300px; /* Max height for the typing area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-bottom: 50px; /* Maintain a margin at the bottom */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack the controls and typing output vertically */
+    min-height: 100vh; /* Minimum height to fill the viewport */
+    margin: 0;
+    padding: 0;
+}
+
+#controls {
+    padding: 10px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #ccc; /* Separation line */
+    display: flex;
+    flex-direction: column; /* Stack the rows vertically */
+}
+
+.control-row {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    flex-wrap: nowrap; /* Allow wrapping if needed */
+    margin-bottom: 5px; /* Space between rows */
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.control-row label {
+    margin-right: 5px;
+}
+
+#num-chars-to-undo {
+    width: 80px;
+}
+
+#alignment-options {
+    display: flex;
+    align-items: center; /* Center alignment options */
+}
+
+#alignment-options,
+#controls label,
+#controls input,
+#controls button {
+    margin-right: 5px; /* Spacing between control elements */
+}
+
+#controls select {
+    margin-right: 10px;
+}
+
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s; /* Smooth transition for hover effect */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker shade of green on hover */
+}
+
+input[type="range"] {
+    flex-grow: 1;
+    margin: 0 10px;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+input[type="range"]:hover {
+    opacity: 1; /* Fully opaque on hover */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+select, input[type="number"], input[type="text"] {
+    background-color: #fff; /* White background for inputs */
+    border: 1px solid #ccc; /* Consistent border styling */
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners for inputs */
+    width: auto;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+select:hover, input[type="number"]:hover, input[type="text"]:hover {
+    border-color: #888; /* Darken border on hover */
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+label {
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+label:hover {
+    background-color: #f4f4f4; /* Light grey background on hover */
+    border-radius: 5px;
+}
+
+/* Custom styling for radio buttons for a more modern look */
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    background-clip: content-box;
+    border: 2px solid #bbbbbb;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+    background-color: #4CAF50;
+}
+
+input[type="radio"]:focus {
+    outline: none; /* Removes the default focus outline */
+    border-color: #4CAF50;
+}
+
+/* Enhancing the focus state for accessibility */
+input, select:focus, input[type="radio"]:focus + label {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5);
+}
+
+button, select, input[type="number"], input[type="text"], input[type="range"] {
+    margin: 0 5px; /* Consistent spacing around buttons and inputs */
+}

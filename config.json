@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {
+      "name": "quran",
+      "filenameMapping": "data/filename-mapping-quran.json",
+      "textsDirectory": "data/text-chapters"
+    }
+  ]
+}

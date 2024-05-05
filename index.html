@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typed.js Example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+    <div id="controls">
+        <div class="control-row">
+            <select id="source-selector"></select>
+            <select id="file-selector"></select>
+
+            <button id="restart-typing">Restart Surah</button>
+            <button id="toggle-typing">Pause</button>
+            <button id="undo-last-line">Back One Verse</button>
+            <button id="undo-typing">Back N Chars</button>
+            <input type="number" id="num-chars-to-undo" placeholder="Number of chars" min="1" value="5">
+        </div>
+        <div class="control-row">
+            <label for="typing-speed-slider">Char Delay</label>(<span id="speed-display">80</span> ms):
+            <input type="range" id="typing-speed-slider" min="10" max="500" value="80" step="10">
+            <div id="alignment-options">
+                <label for="alignment-label">Alignment:</label>
+                <label><input type="radio" name="alignment" value="left"> Left</label>
+                <label><input type="radio" name="alignment" value="center" checked> Center</label>
+                <label><input type="radio" name="alignment" value="right"> Right</label>
+            </div>
+        </div>
+    </div>
+    <div id="typed-output"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
